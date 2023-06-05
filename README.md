@@ -1,6 +1,8 @@
 # 💻 [DEMO](https://portfolio-astro-js.vercel.app/)
 
 ## 🚀 Landing Page Astro
+![image](https://github.com/RendraAndriansyah/portfolio-astroJS/assets/112911127/f2e6d364-ca60-4d21-836a-c72746211e8b)
+
 
 ## 🧞 Commands
 
