@@ -1,81 +1,46 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import MainLayout from "../layouts/MainLayout.astro";
+import backgroundPrimary from "../assets/images/bg-1.png";
+import backgroundSecondary from "../assets/images/bg-2.png";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<MainLayout
+	title="Rendra | Portfolio"
+	seoDesc="Frontend Developer who expertise in Astro, React, NextJs, VueJS, and NuxtJs"
+>
+	<main class="overflow-hidden">
+		<div class="w-8/12 md:w-6/12 mx-auto drop-shadow-[0px_35px_35px_rgba(39,245,231,0.8)]">
+			<h1 class="text-3xl md:text-4xl font-medium text-center pb-80 md:pb-0 md:mb-28 md:pr-20">
+				Hello 👋🏼,I am <span class="text-amber-500 font-semibold">Rendra</span> Andriansyah
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+				<div class="text-base text-start w-10/12 mx-auto pt-4">
+					<span id="element"></span>
+				</div>
+			</h1>
+		</div>
+		<img
+			src={backgroundPrimary}
+			width="600"
+			class="absolute overflow-hidden bottom-10 md:-bottom-0 right-0 -z-10 min-w-sm lg:max-w-xl"
+		/><img
+			src={backgroundSecondary}
+			class="absolute overflow-hidden bottom-10 md:-bottom-0 left-0 -z-10 hidden md:block md:w-3/12"
+		/>
+
+		<div id="sentence-typed" class="hidden">
+			<p>
+				I am a <strong> <span class="text-sky-300/90">Frontend</span> Developer</strong>
+			</p>
+			<p>I <em>work</em> with ReactJS, NextJS, Vue, & Astro.</p>
+		</div>
+	</main>
+</MainLayout>
+
+<script>
+	import Typed from "typed.js";
+	var typed = new Typed("#element", {
+		stringsElement: "#sentence-typed",
+		typeSpeed: 40,
+		loop: true,
+	});
+</script>

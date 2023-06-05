@@ -1,0 +1,16 @@
+---
+import astroLogo from "../assets/astro.png";
+---
+
+<footer class="text-gray-200 mt-auto py-4">
+	<small class="flex justify-center items-center gap-1"
+		>Copyright &copy; <span id="Copyright"></span>| developed with
+		<a href="https://astro.build/" target="_blank">
+			<img src={astroLogo} width="50" alt="astro" />
+		</a>
+	</small>
+</footer>
+
+<script>
+	document.querySelector("#Copyright").textContent = new Date().getFullYear().toString();
+</script>

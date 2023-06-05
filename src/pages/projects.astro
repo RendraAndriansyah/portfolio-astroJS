@@ -1,0 +1,19 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import altacinema from "../assets/projects/altacinema.png";
+import ikuzport from "../assets/projects/ikuzport.png";
+import dashboard from "../assets/projects/dashboard.png";
+import holistay from "../assets/projects/holistay.png";
+---
+
+<MainLayout title="Rendra | Projects" seoDesc="List of my project which developed with  framework frontend">
+	<div class="w-8/12 lg:6-12 mx-auto">
+		<h1 class="text-4xl py-5 text-center font-semibold">Projects</h1>
+		<div class="flex flex-wrap justify-center gap-4 md:gap-6 drop-shadow-[10px_1px_65px_rgba(89,199,231,0.8)]">
+			<a href="/projects/altacinema"><img class="rounded" width="380" src={altacinema} alt="" /></a>
+			<a href="/projects/ikuzport"><img class="rounded" width="380" src={ikuzport} alt="" /></a>
+			<a href="/projects/dashboard"><img class="rounded" width="380" src={dashboard} alt="" /></a>
+			<a href="/projects/holistay"><img class="rounded" width="380" src={holistay} alt="" /></a>
+		</div>
+	</div>
+</MainLayout>

@@ -1,0 +1,78 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import profile from "../assets/images/profile.jpg";
+import { Icon } from "astro-icon";
+---
+
+<MainLayout
+	title="Rendra | About me"
+	seoDesc=`Hii There, I'm Rendra Andriansyah, as FrontendDeveloper I'm able to work with ReactJS, NextJS, VueJS, & Astro.`
+>
+	<div class="w-7/12 mx-auto">
+		<h1 class="text-center text-4xl font-semibold p-2">About Me</h1>
+		<div class="flex lg:flex-row flex-col items-center gap-8">
+			<img
+				src={profile}
+				alt="profile"
+				class="w-48 h-56 object-cover rounded-se-3xl rounded-bl-3xl shadow-sm drop-shadow-[10px_1px_65px_rgba(89,199,231,0.8)]"
+			/>
+			<div id="profile" class="grid grid-flow-row">
+				<h2 class="font-semibold text-center md:text-start text-3xl pb-2">Muhammad Rendra Andriansyah</h2>
+				<h1 class="text-justify">
+					Skilled and passionate developer with a vast interest in technology. Have strong confidence in UI website
+					development using ReactJS with library CSS Framework like Bootstrap, Tailwind CSS, Chakra UI, & Bulma CSS. I
+					am open to learning and trying new ideas to see what works best, and I’m seeking employment with a company
+					where I can grow professionally and personally.
+				</h1>
+			</div>
+		</div>
+
+		<div class="flex justify-center gap-4 lg:justify-between flex-wrap pt-5">
+			<div>
+				<h1 class="text-center text-3xl font-semibold p-2">Languages</h1>
+				<div class="flex gap-2 align-middle pl-2">
+					<Icon name="vscode-icons:file-type-html" size="35" />
+					<Icon name="vscode-icons:file-type-css" size="35" />
+					<Icon name="logos:javascript" size="30" />
+					<Icon name="vscode-icons:file-type-typescript-official" size="35" />
+				</div>
+			</div>
+			<div>
+				<h1 class="text-center text-3xl font-semibold p-2">Tools</h1>
+				<div class="flex gap-2 align-middle">
+					<Icon name="vscode-icons:file-type-vscode2" size="35" />
+					<Icon name="logos:figma" size="35" />
+					<Icon name="logos:ubuntu" size="35" />
+					<Icon name="vscode-icons:file-type-photoshop" size="35" />
+				</div>
+			</div>
+			<div>
+				<h1 class="text-center text-3xl font-semibold p-2">Frameworks & Library</h1>
+				<div class="flex gap-2 align-middle pl-2">
+					<Icon name="logos:react" size="35" />
+					<Icon name="cib:next-js" size="35" />
+					<Icon name="logos:vue" size="35" />
+					<Icon name="vscode-icons:file-type-astro" size="35" />
+					<Icon name="logos:redux" size="35" class="text-purple-100" />
+					<Icon name="logos:sass" size="35" />
+					<Icon name="vscode-icons:file-type-tailwind" size="40" />
+				</div>
+			</div>
+		</div>
+
+		<div id="contact" class="pt-8">
+			<h2 class="text-3xl font-bold text-amber-500 text-center">Connect with me !</h2>
+			<div class="flex justify-center p-5 gap-10">
+				<a href="https://www.linkedin.com/in/RendraAndriansyah" target="_blank">
+					<Icon name="simple-icons:linkedin" size="50" class="hover:text-blue-500" />
+				</a>
+				<a href="https://github.com/RendraAndriansyah">
+					<Icon name="simple-icons:github" size="50" class="hover:text-white" />
+				</a>
+				<a href="https://leetcode.com/RendraAndriansyah">
+					<Icon name="simple-icons:leetcode" size="50" class="hover:text-amber-500" />
+				</a>
+			</div>
+		</div>
+	</div>
+</MainLayout>

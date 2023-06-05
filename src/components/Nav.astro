@@ -1,0 +1,20 @@
+---
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import logo from "../assets/logo.svg";
+---
+
+<header class="md:flex justify-between px-4 py-2.5 h-[10vh]">
+	<Astronav>
+		<div class="w-full flex justify-between">
+			<a href="/"><img src={logo} alt="logo" width="60" /></a>
+			<MenuIcon class="block w-4 h-4 text-gray-200 md:hidden" />
+		</div>
+		<MenuItems class="hidden md:flex">
+			<ul class="flex flex-col md:flex-row md:gap-5 gap-3 py-2">
+				<li><a class="hover:text-amber-500" href="/">Home</a></li>
+				<li><a class="hover:text-amber-500" href="/projects">Projects</a></li>
+				<li><a class="hover:text-amber-500" href="/about">About</a></li>
+			</ul>
+		</MenuItems>
+	</Astronav>
+</header>
